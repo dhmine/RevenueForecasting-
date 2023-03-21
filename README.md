@@ -10,3 +10,20 @@ To achieve this, we can employ data-driven approaches such as machine learning a
 **We want to predict the revenue monthly**
 
 
+### Features engineering
+
+Nwe have data from real hotelsso we can begin the process of feature engineering, which involves selecting, transforming, and creating relevant variables to enhance the predictive power of our models. In this case, we will use longitude and latitude as features, as well as create additional variables representing holidays, seasonality, and trends to build a more robust forecasting model.
+
+**Longitude and Latitude**: These geographical features will help capture the regional differences in revenue generation. By including them in our model, we can account for variations in subhotel performance due to their specific locations.
+
+**Holidays**: The presence of national and local holidays can have a significant impact on hotel demand and, consequently, revenue. Creating a binary variable that indicates whether a particular day is a holiday or not will allow our model to consider the effect of holidays on subhotel revenue.
+
+**Seasonality**: The demand for hotel accommodations often follows seasonal patterns. To capture these fluctuations, we can create categorical variables representing different seasons (e.g., spring, summer, fall, and winter) or incorporate sine and cosine functions with annual and semi-annual frequencies to model the cyclical nature of seasonality.
+
+**Trend**: To account for the underlying growth or decline in the hotel industry over time, we can create a trend variable that represents the passage of time. This can be as simple as a continuous integer variable counting the months, or more sophisticated approaches such as decomposing time series data into trend, seasonal, and residual components using techniques like the Hodrick-Prescott filter or exponential smoothing.
+
+By incorporating these features into our model, we can better understand the various factors that contribute to the monthly revenue of each subhotel. This improved understanding will enable us to make more accurate predictions, leading to better decision-making and resource allocation for the hotels and their subhotels in France.
+
+
+For Holidays, i've used vacances-scolaires-france.csv **source** : *https://github.com/AntoineAugusti/vacances-scolaires-france/blob/master/vacances_scolaires_france/data/data.csv*
+
